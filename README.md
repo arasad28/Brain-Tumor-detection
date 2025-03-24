@@ -1,66 +1,67 @@
 # Brain Tumor Detection
-Building a detection model using a convolutional neural network in Tensorflow & Keras.<br>
-Used a brain MRI images data founded on Kaggle. You can find it [here](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset).<br>
 
-**About the data:**<br>
-The dataset contains 4 folders. For this test only two folder is used glicoma tumor and no tumor.
+Building a detection model using a convolutional neural network in TensorFlow & Keras.  
+The dataset used is a collection of brain MRI images found on Kaggle. You can find it [here](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset).
+
+**About the data:**  
+The dataset contains 4 folders. For this test, only two folders were used: glioma tumor and no tumor.
 
 ## Data Augmentation:
 
 **Why did I use data augmentation?**
 
-Since this is a small dataset, There wasn't enough examples to train the neural network. Also, data augmentation was useful in taclking the data imbalance issue in the data.<br>
+Since this is a small dataset, there weren’t enough examples to train the neural network effectively. Data augmentation also helped tackle the data imbalance issue.  
 
-Further explanations are found in the notebook.
+Further explanations can be found in the notebook.
 
 ## Data Split:
 
-The data was split in the following way:
+The data was split as follows:
 1. 70% of the data for training.
-2. 50% of the data for validation.
-3. 50% of the data for testing.
+2. 15% of the data for validation.
+3. 15% of the data for testing.
 
-# Training the model
-The model was trained for 30 epochs and these are the loss & accuracy plots:
+---
 
+# Training the Model
 
-![Loss plot](loss.PNG)
+The model was trained for 30 epochs, and these are the loss and accuracy plots:
 
+![Loss plot](loss.png)
 
-![Accuracy plot](acc.PNG)
+![Accuracy plot](acc.png)
+
+---
 
 # Results
 
-Now, the best model (the one with the best validation accuracy) detects brain tumor with:<br>
+The best model (the one with the highest validation accuracy) detects brain tumors with:
 
-**91.2%** accuracy on the **test set**.<br>
-These resutls are very good considering that the data is balanced.
+**91.2%** accuracy on the **test set**.  
+These results are quite good, considering the data imbalance.
 
 **Performance table of the best model:**
 
-| <!-- -->  | Validation set | Test set |
-| --------- | -------------- | -------- |
-| Accuracy  | 91%            | 96%      |
+|              | Validation Set | Test Set |
+|--------------|----------------|----------|
+| Accuracy    | 91%            | 96%      |
 
-
+---
 
 # Final Notes
 
-What's in the files?
-
-1. The code in the IPython notebooks.
-2. The arrangment of the dataset, you can remove it if you want try from begain.
+**What's in the files?**
+1. Code in the IPython notebooks.
+2. The arrangement of the dataset (you can remove it if you want to try from the beginning).
 3. The models are stored as *.model* files. They can be restored as follows:
 
-
-```
+```python
 from keras.models import load_model
 model = load_model("bestmodel.h5")
 ```
 
-> This code is test in colab, so if you want to try there, fix the path
-
-***If you need any further help, please contract with me***
+> This code was tested in Colab, so the paths aren't fixed. If you want to try it there, please adjust the paths accordingly.<br>
+* If you need any further help, please contact me.*
 
 
 Contributes are welcome!
