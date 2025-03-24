@@ -60,7 +60,7 @@ from keras.models import load_model
 model = load_model("bestmodel.h5")
 ```
 
-> TThis code was tested in Colab, so the paths aren't fixed. If you want to try it there, please adjust the paths accordingly.<br>
+> This code was tested in Colab, so the paths aren't fixed. If you want to try it there, please adjust the paths accordingly.<br>
 * If you need any further help, please contact me.*
 
 
