@@ -62,7 +62,7 @@ model = load_model("bestmodel.h5")
 
 > This code was tested in Colab, so the paths aren't fixed. If you want to try it there, please adjust the paths accordingly.<br>
 
-* If you need any further help, please contact me. *
+*If you need any further help, please contact me.*
 
 
 Contributes are welcome!
